@@ -1,6 +1,6 @@
 #ifndef _LIBRERIA_H
 #define _LIBRERIA_H
 
-void ImprimeNumero();
+int head(int argc, char *argv[]);
 
 #endif

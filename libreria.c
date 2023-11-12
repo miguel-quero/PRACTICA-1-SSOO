@@ -15,5 +15,6 @@ int head(int N)
     }
     // liberación de la memoria dinámica.
     free(input);
+    
     return 0;
 }

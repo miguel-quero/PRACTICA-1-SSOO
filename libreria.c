@@ -7,13 +7,15 @@
 
 int head(int N)
 {
-    char *input = (char *)malloc(512*sizeof(char)); //variable para almacenar las lineas que el usuario introduce por teclado.
+    char *input = (char *)malloc(1024*sizeof(char)); //variable para almacenar las lineas que el usuario introduce por teclado.
+    int lineasmostradas = 0;
 
     // este código coge la entrada que el usuario escribe y la muestra por pantalla. Se repite dependiendo del valor de lineas.
-    for(int i=N; i>0; i--){
-        fgets(input,sizeof(input),stdin);
-        printf("%s",input);
+    while (lineasmostradas < N && fgets(input, sizeof(input), stdin) != NULL) {
+        printf("%s", input);
+        lineasmostradas++;
     }
+
     // liberación de la memoria dinámica.
     free(input);
     
